@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blackjack</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Blackjack</h1>
+    <div style="display:flex;gap:12px;align-items:center;">
+      <div id="wallet" class="wallet">Coins: <span id="coin-amount">0</span> 💰</div>
+      <button id="open-exchange">Exchange</button>
+    </div>
+  </header>
+  <main>
+    <div id="game-area"></div>
+    <div class="controls">
+      <label>Players: <select id="bj-players"><option value="1">1 (You only)</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select></label>
+      <input id="bet-input" type="number" min="1" value="10"> <button id="bet-btn">Bet & Deal</button>
+      <button id="restart-btn">Restart</button>
+      <a class="card-link small" href="index.html">Back to Lobby</a>
+    </div>
+  </main>
+  
+  <!-- Exchange Modal -->
+  <div id="exchange-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Coin Exchange</h2>
+      <p>Rate: <span id="exchange-rate">1 USD = 100 Coins</span></p>
+      <div class="exchange-row">
+        <input id="exchange-amount" type="number" value="10" min="1">
+        <select id="exchange-type"><option value="buy">Buy Coins (USD → Coins)</option><option value="sell">Sell Coins (Coins → USD)</option></select>
+        <button id="exchange-do">Execute</button>
+      </div>
+      <div id="exchange-msg" class="result"></div>
+      <h3>Transaction Log</h3>
+      <div id="tx-log" class="tx-log"></div>
+      <button id="exchange-close">Close</button>
+    </div>
+  </div>
+
+  <script src="js/blackjack.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

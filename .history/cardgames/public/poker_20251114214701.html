@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Texas Hold'em</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Texas Hold'em</h1>
+    <div id="wallet" class="wallet">Coins: <span id="coin-amount">0</span> 💰</div>
+  </header>
+  <main>
+    <div id="game-area"></div>
+    <div class="controls">
+      <input id="poker-bet" type="number" min="1" value="10"> <button id="poker-bet-btn">Place Bet</button>
+      <button id="poker-next">Next Stage</button>
+      <button id="poker-reveal">Reveal</button>
+      <button id="poker-restart">Restart</button>
+      <a class="card-link small" href="index.html">Back to Lobby</a>
+    </div>
+  </main>
+  <script src="js/poker.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

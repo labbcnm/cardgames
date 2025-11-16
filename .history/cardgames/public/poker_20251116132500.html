@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Texas Hold'em</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Texas Hold'em</h1>
+        <div style="display:flex;gap:12px;align-items:center;">
+            <div id="wallet" class="wallet">Coins: <span id="coin-amount">0</span> 💰</div>
+            <button id="open-exchange">Exchange</button>
+        </div>
+    </header>
+    <main>
+        <div style="margin-bottom:12px;">
+            <button id="poker-restart" style="margin-left:12px;">新遊戲</button>
+        </div>
+        <div id="game-area"></div>
+        <div class="controls">
+            <input id="poker-bet" type="number" min="1" value="10" placeholder="下注金額">
+            <button id="poker-bet-btn">下注</button>
+            <button id="poker-reveal" style="margin-left:12px;">比牌 / 結束回合</button>
+            <a class="card-link small" href="index.html">回到大廳</a>
+        </div>
+    </main>
+
+    <!-- Exchange Modal -->
+    <div id="exchange-modal" class="modal hidden" role="dialog" aria-hidden="true" aria-labelledby="exchange-title">
+        <div class="modal-content" role="document">
+            <h2 id="exchange-title">Coin Exchange</h2>
+            <p>Rate: <span id="exchange-rate">1 USD = 100 Coins</span></p>
+            <div class="exchange-row">
+                <input id="exchange-amount" type="number" value="10" min="1">
+                <select id="exchange-type">
+                    <option value="buy">Buy Coins (USD → Coins)</option>
+                    <option value="sell">Sell Coins (Coins → USD)</option>
+                </select>
+                <button id="exchange-do">Execute</button>
+            </div>
+            <div id="exchange-msg" class="result"></div>
+            <h3>Transaction Log</h3>
+            <div id="tx-log" class="tx-log"></div>
+            <button id="exchange-close" aria-label="Close exchange dialog">Close</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/poker-advanced.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blackjack</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Blackjack</h1>
+    <div id="wallet" class="wallet">Coins: <span id="coin-amount">0</span> 💰</div>
+  </header>
+  <main>
+    <div id="game-area"></div>
+    <div class="controls">
+      <input id="bet-input" type="number" min="1" value="10"> <button id="bet-btn">Bet</button>
+      <button id="double-btn">Double</button>
+      <button id="split-btn">Split</button>
+      <button id="restart-btn">Restart</button>
+      <a class="card-link small" href="index.html">Back to Lobby</a>
+    </div>
+  </main>
+  <script src="js/blackjack.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
